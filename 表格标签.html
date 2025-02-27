@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>表格标签</title>
+</head>
+<body>
+<p>每个表格由 table 标签开始。</p>
+<p>每个表格行由 tr 标签开始。</p>
+<p>每个表格数据由 td 标签开始。</p>
+<p> thead 表示表头</p>
+<p> tbody 表示表的内容</p>
+<p> colspan 表示这行占用多少个位置</p>
+<p>rowspan 表示这列占用多少个位置</p>
+<table border="5" cellpadding="4" cellspacing="4">
+  <thead>
+    <tr>
+      <th>username</th>
+      <th>password</th>
+      <th>hoby</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td colspan="2">tank</td>
+      <td rowspan="2">生蚝</td>
+    </tr>
+    <tr>
+      <td>egon</td>
+      <td>123</td>
+    </tr>
+    <tr>
+      <td>jerry</td>
+      <td>123</td>
+      <td>大保健</td>
+    </tr>
+  </tbody>
+</table>
+</body>
+</html>
