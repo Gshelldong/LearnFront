@@ -7,7 +7,7 @@
 <body>
 <h2>注册页面</h2>
 
-
+<textarea name="" id="" cols="30" rows="10" ></textarea>
 <pre>enctype 属性:
 enctype 属性指定了表单数据在提交到服务器时的编码类型。常见的值有：
 application/x-www-form-urlencoded：默认值，表单数据会被编码为键值对，适合文本数据的提交。
@@ -15,6 +15,69 @@ multipart/form-data：用于表单中包含文件上传的情况。表单数据�
 </pre>
 
 <form action="http://127.0.0.1:5000/index/" method="POST" ENCTYPE="multipart/form-data">
+<!--  用p标签和label标签把input包起来，可以实现鼠标点username的时候光标直接跳转到input框里面  -->
+    <p><label for="d1">username: <input type="text" id="d1" name="username"></label></p>
+    <p><label for="d2">password: <input type="text" id="d2" name="password"></label></p>
+
+    <p><label for="d3">birthday:</label>
+<!--  date 日期的选择  -->
+    <input type="date" id="d3" name="birth">
+    </p>
+
+    <p>
+<!--    checked 确定一个默认值    -->
+<!--    label 标签可以使用id进行定位选择    -->
+<!--    radio 单选标签    -->
+        <input type="radio" name="gender" id="g1" checked value="male"><label for="g1">男</label>
+        <input type="radio" name="gender" id="g2" value="female"><label for="g2">女</label>
+    </p>
+
+<!--  checkbox 多选框  -->
+    <p>
+        爱好:
+        <input type="checkbox" name="hobby" value="basketball">篮球
+        <input type="checkbox" name="hobby" value="football">足球
+        <input type="checkbox" name="hobby" id="h3" value="doublecolorball"><label for="h3">双色球</label>
+    </p>
+
+<!--  select 下拉框  -->
+    <p>
+        省市:
+        <select name="province" id="x1">
+            <option value="sh">上海</option>
+            <option value="cd">成都</option>
+            <option value="cq">重庆</option>
+        </select>
+    </p>
+<!--  多级下拉框，比如各个市有特定区县  -->
+    <p>
+        <select name="area" id="">
+            <optgroup label="重庆">
+                <option value="dz">大足区</option>
+                <option value="yz">渝中区</option>
+                <option value="cs">长寿区</option>
+            </optgroup>
+            <optgroup label="上海">
+                <option value="">虹桥</option>
+                <option value="">静安区</option>
+                <option value="">松江区</option>
+            </optgroup>
+        </select>
+    </p>
+
+<!--  file 上传文件字段  -->
+    <p>
+        <input type="file" name="avatar">
+    </p>
+
+    <p ><span style="vertical-align: top;display: inline">个人简介：</span>
+        <textarea name="info" id="" cols="100" rows="20" style="resize: none"></textarea>
+    </p>
+
+    <input type="submit" value="submit">
+    <input type="button" value="button">
+    <input type="reset" value="reset">
+    <button>button按钮</button>
 
 </form>
 </body>

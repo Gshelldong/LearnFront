@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>属性选择器</title>
+  <style>
+    /*
+        1.具有某个属性名
+        2.具有某个属性名及属性值
+        3.具有某个属性名及属性值某个标签
+        */
+  /*  只要有hobby属性的标签*/
+  /*  [hobby] {*/
+  /*    color: red;*/
+  /*    background: gray;*/
+  /*  }*/
+
+    /*[hobby="jbd"] {*/
+    /*    color: yellow;*/
+    /*    background: blue;*/
+    /*}*/
+
+        span[hobby="jbd"] {
+        color: pink;
+        background: blue;
+    }
+  </style>
+</head>
+<body>
+<input type="text" name="username" hobby="jbd">
+<input type="text">
+<span hobby="jbd">span</span>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>组合选择器</title>
+  <style>
+    /*后代选择器 影响第一个标签下的所有子标签*/
+    /*div span {*/
+    /*  color: red;*/
+    /*}*/
+
+    /*儿子选择器,效果和上面的选择器一样*/
+    /*div>span {*/
+    /*  color: blue;*/
+    /*}*/
+
+    /*邻居选择器*/
+    /*div+span {*/
+    /*  color: green;*/
+    /*}*/
+
+    /*弟弟选择器 同级别的下面所有的标签*/
+    div~span {
+      color: gray;
+    }
+  </style>
+</head>
+<body>
+<span>div上面的第一个span</span>
+<span>div上面的第二个span</span>
+<div>div
+  <span>div里面的第一个span</span>
+  <span>
+    <p>div里面的第一个p
+      <span>div里面的第一个p里面的span</span>
+    </p>
+  </span>
+  <span>div里面的最后一个span</span>
+</div>
+<span>div下面的第一个span</span>
+<span>div下面的第二个span</span>
+<span>div下面的第三个span</span>
+</body>
+</html>

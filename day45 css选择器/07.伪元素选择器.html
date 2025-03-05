@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪元素选择器</title>
+    <style>
+        p:before {
+            content: "$";
+            color: gold;
+        }
+
+/*after在解决浮动的问题上 很有用*/
+        p:after {
+            content: "?";
+            color: red;
+        }
+    </style>
+</head>
+<body>
+<p>澳门最大线上赌场上线了！</p>
+<p>澳门最大线上赌场上线了！</p>
+<p>澳门最大线上赌场上线了！</p>
+<p>澳门最大线上赌场上线了！</p>
+</body>
+</html>

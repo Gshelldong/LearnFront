@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>基本选择器</title>
+    <style>
+        /*标签选择器*/
+        div {
+            color: red;
+        }
+        /*类选择器*/
+        .c1 {
+            color: green;
+        }
+        /*id选择器*/
+        #i1 {
+            color: yellow;
+        }
+
+        /*通用选择器，这个在同级里面影响的优先级最低，所以不会影响上面的设置*/
+        * {
+            color: aqua;
+        }
+    </style>
+</head>
+<body>
+<div>我是标签选择器影响的</div>
+<p class="c1">我是类选择器影响的</p>
+<p id="i1">我是被id选择器影响的</p>
+</body>
+</html>
