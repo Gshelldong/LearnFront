@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>文字对齐方式</title>
+  <style>
+    p {
+      /*一个字体大小是16，两个字体首行缩进32px*/
+      font-size: 16px;
+      text-indent: 32px;
+
+      text-align: center;
+      /*text-align: left;*/
+      /*text-align: right;*/
+      /*text-align: justify;*/
+
+      text-decoration: underline;
+      /*text-decoration: overline;*/
+      /*text-decoration: line-through;*/
+    }
+
+    a {
+      /*取消a 标签的下划线，并设置默认颜色为 橙色*/
+      text-decoration: none;
+      color: orange;
+    }
+
+    /*鼠标悬停是蓝色*/
+    a:hover {
+      color: blue;
+    }
+  </style>
+</head>
+<body>
+<p>规定元素中文本的水平对齐方式</p>
+
+<!--s 中横线标签-->
+<s>规定元素中文本的水平对齐方式</s>
+
+<a href="https://cip.cc">规定元素中文本的水平对齐方式</a>
+</body>
+</html>

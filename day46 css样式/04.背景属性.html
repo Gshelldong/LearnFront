@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>背景属性</title>
+  <style>
+    p {
+      color: white;
+      background: black;
+    }
+
+    div {
+      background-image: url("ddg.png");
+      width: 500px;
+      height: 500px;
+
+      /*不自动填充*/
+      background-repeat: no-repeat;
+      /*background-repeat: repeat-x;*/
+      /*background-repeat: repeat-y;*/
+      /*background-position: center center;*/
+      /* x轴和y轴方向距离 */
+      background-position: 10px 30px;
+
+      background: orange url("ddg.png") no-repeat center center;
+    }
+  </style>
+</head>
+<body>
+  <div>div</div>
+  <p>p 标签</p>
+</body>
+</html>
