@@ -112,7 +112,7 @@
 	
 ## 块标签样式属性
 行内标签默认无法设置宽高属性
-```css
+```text
             width: 200px;  宽
             height: 100px; 长
             border: 1px solid black; 边框属性 粗细 线调类型 颜色
@@ -145,7 +145,7 @@ color支持rgb和十六进制
       text-align: justify;  靠左
 ```
 
-# 背景属性
+## 背景属性
 
 ```text
 background: black;   颜色填充
@@ -154,6 +154,7 @@ background-image: url("ddg.png");  图片填充，不设置宽高就是内容撑
 /*不自动填充*/
 background-repeat: no-repeat;
 
+从显示器左上角位置点
 background-repeat: repeat-x;  # 距离x轴
 background-repeat: repeat-y;  # 距离y轴
 
@@ -162,4 +163,44 @@ background-position: center center;  # 图片居中
 background-position: 10px 30px;   /* x轴和y轴方向距离 */
 
 background: orange url("ddg.png") no-repeat center center; # 对上面的综合写法
+background-attachment: fixed;   把背景图片固定在窗口
 ```
+
+## 边框属性
+
+```text
+# 参考正方形上下左右
+          border-top: red solid 2px;  线条颜色 样式 宽度
+          border-left: blue dashed 2px;  长方形虚线
+          border-right: yellow dotted 2px;  . 虚线 独占一行会被顶出屏幕外面，设置下宽度就能看到
+          border-bottom: purple solid 2px;
+          border-radius: 50%; 每个边倒多少圆角
+
+```
+
+## 盒子模型
+
+默认情况下，比如画一个200x200的div,在浏览器上显示的不是顶着浏览器写的，而是有空隙，就是盒子模型导致的。
+
+- 两个快递盒之间的距离(标签与标签之间的距离) 称之为 外边距(margin)
+- 纸盒的厚度(边框)    称之为边框(border)
+- 内部的物品到盒子的距离(内部文本与边框的距离)  称之为 内边距(padding)
+- 物品本身的大小(文本大小)   称之为内容(content)
+
+
+![](box-model.png)
+
+外距离
+
+```text
+margin: 0; 外边距,全部方向置为零
+margin: 10px 20px 30px 40px;  顺时针方向影响
+
+# 支持4个方向设置
+margin-top: 0;
+margin-right: 0;
+margin-bottom: 0;
+margin-left: 0;
+```
+
+
