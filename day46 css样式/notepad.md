@@ -194,13 +194,17 @@ background-attachment: fixed;   把背景图片固定在窗口
 
 ```text
 margin: 0; 外边距,全部方向置为零
-margin: 10px 20px 30px 40px;  顺时针方向影响
+margin: 10px 20px 30px 40px;  顺时针方向影响 auto只能左右居中
 
 # 支持4个方向设置
 margin-top: 0;
 margin-right: 0;
 margin-bottom: 0;
 margin-left: 0;
+padding: 内容到边框的距离
 ```
 
 
+## 浮动
+
+就是块飘在了空中，浮动的元素是脱离正常文档流的也就意味着没有独占一行一说也不再占用原来的位置。
