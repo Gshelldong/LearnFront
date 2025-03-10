@@ -1,0 +1,102 @@
+body {
+    margin: 0;
+}
+/*左边的样式开始*/
+#d-img {
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 20px auto;
+    border: 3px solid white;
+}
+
+.blog-userinfo {
+    font-size: 20px;
+    color: white;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 10px;
+
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: white;
+}
+
+a:hover {
+    color: lightgray;
+}
+
+.about {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    text-align: center;
+    padding-left: 0px;
+}
+
+.ability {
+    text-align: center;
+    padding-left: 0px;
+}
+
+/*左边的样式结束*/
+
+
+/*右边的样式开始*/
+.blog-left {
+    background: black;
+    position: fixed;
+    width: 20%;
+    height: 100%;
+    float: left;
+}
+
+.blog-right {
+    background: lightgray;
+    float: right;
+    width: 80%;
+}
+
+.blog-content {
+    background: white;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.4);
+    margin: 10px 6px;
+    height: 200px;
+    width: 98%
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    border-left: red solid 10px;
+    padding-left: 20px;
+}
+
+.title-date {
+    float: right;
+    font-size: 20px;
+    margin: 20px;
+}
+
+.project-info {
+    font-size: 30px;
+    border-bottom: black 2px solid;
+    margin-top: 50px;
+    margin-left: 10px;
+}
+
+.project-tag {
+    font-size: 30px;
+    margin-top: 10px;
+}
+
+/*div下面的a标签*/
+.right-a {
+    color: black;
+    margin-left: 10px;
+}
+
+/*右边的样式结束*/

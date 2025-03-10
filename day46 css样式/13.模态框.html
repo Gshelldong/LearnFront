@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态框</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .cover {
+      position: fixed; /*固定定位*/
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0; /*定位之后的边框距离*/
+      background: rgba(128,128,128,0.45);
+      z-index: 10; /*z轴方向的位置*/
+    }
+
+    .modal {
+      height: 240px;
+      width: 400px;
+      background: white;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      z-index: 20;
+      margin-left: -200px; /*外边距移动的距离*/
+      margin-top: -100px;
+    }
+  </style>
+</head>
+<body>
+<div>我是最底层的</div>
+<div class="cover"></div>
+<div class="modal">
+  <p><label for="d1">username: <input type="text" id="d1"></label></p>
+  <p><label for="d2">password: <input type="password" id="d2"></label></p>
+  <input type="submit">
+</div>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>浮动</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    #d1 {
+      border: 2px solid black;
+    }
+
+    .c1 {
+      width: 100px;
+      height: 100px;
+      background: red;
+      float: left;  /*浮动到右边，脱离文档流*/
+    }
+
+    .c2 {
+      width: 100px;
+      height: 100px;
+      background: green;
+      float: right; /*浮动到左边，脱离文档流*/
+    }
+
+    /*修复父标签的塌陷*/
+    .clearfix:after {
+       content: '';
+       display: block;
+       clear: both;  /*左右两边都不能有浮动的元素*/
+    }
+  </style>
+</head>
+<body>
+<div id="d1" class="clearfix">
+  <div class="c1"></div>
+  <div class="c2"></div>
+</div>
+</body>
+</html>

@@ -204,7 +204,73 @@ margin-left: 0;
 padding: 内容到边框的距离
 ```
 
+内容到标签的距离
+```text
+border: 3px solid red;
+padding-top: 20px;
+padding-left: 10px;
+padding-bottom: 30px;
+padding-right: 50px;
+text-align: right;
+padding: 10px;  /* padding 同样支持1 2 3 4个参数  效果同margin*/
+```
+
 
 ## 浮动
 
 就是块飘在了空中，浮动的元素是脱离正常文档流的也就意味着没有独占一行一说也不再占用原来的位置。
+元素浮动之后，父标签会塌陷，要想把父标签撑起来的固定css
+```css
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;  /* 左右两边都不能有浮动的元素*/
+}
+```
+
+## 溢出
+
+就是说一个便签固定了大小之后文本长度超过了这个框的限制范围。
+```css
+overflow: hidden;
+
+auto  内容滑块
+hidden 直接隐藏超出部分的内容
+visible 直接展示
+```
+
+
+## 定位
+
+- 绝对定位：相对于已经定位过的父标签,只给你一个父标签的长宽让你做定位。
+- 相对定位：相对于标签自身原来的位置
+- 固定定位：回到顶部
+
+
+# 脱离文档流的情况
+
+```text
+脱离文档流
+	1.浮动的元素都是脱离文档流的。
+	2.绝对定位是脱离文档流的。
+	3.固定定位也是脱离文档流的。
+
+不脱离文档流
+	1.相对定位不脱离文档流。
+```
+
+## 透明度
+
+```text
+opacity: 0.5;   调整字体的透明度
+```
+
+# display属性
+
+```text
+display: inline-block; /*既有行内标签的属性，又有块级标签的属性*/
+
+inline 行级标签
+block  块级标签
+```
+	

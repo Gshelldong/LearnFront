@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>利用浮动实现左右布局</title>
+  <style>
+    body {
+      margin: 0;
+    }
+
+    .blog-left {
+      width: 20%;
+        position: absolute;
+      height: 100%;
+      background: gray;
+    }
+
+    .blog-right {
+        width: 80%;
+        background: gold;
+        float: right;
+        height: 1000px;
+    }
+
+    .content {
+        background: green;
+        width: 99%;
+        height: 100px;
+        /*margin-top: 10px;*/
+        margin: 8px auto;
+        /*margin-left: auto;*/
+        /*margin-right: auto;*/
+    }
+  </style>
+</head>
+<body>
+<div class="blog-left"></div>
+<div class="blog-right">
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+    <div class="content"></div>
+</div>
+</body>
+</html>

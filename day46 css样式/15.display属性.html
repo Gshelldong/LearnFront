@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>display属性</title>
+    <style>
+        #d1 {
+            /*display: none; 标签不显示并且也不再占用位置*/
+            visibility: hidden;   /*标签不显示并且也不再占用位置*/
+        }
+
+        span {
+            width: 60px;
+            height: 60px;
+            background: black;
+            display: inline-block; /*既有行内标签的属性，又有块级标签的属性*/
+        }
+
+        .c1 {
+            width: 50px;
+            height: 50px;
+            background: red;
+            display: inline; /*展示成行内标签*/
+        }
+
+        .c2 {
+            width: 50px;
+            height: 50px;
+            background: green;
+            display: inline;
+        }
+    </style>
+</head>
+<body>
+    <p id="d1">123</p>
+    <span>span1</span>
+    <span>span2</span>
+    <div class="c1">div1</div>
+    <div class="c2">div2</div>
+</body>
+</html>
