@@ -176,11 +176,351 @@ s2.split('|')
 
 ## 数组
 
+![](数组方法.png)
+![](数组方法2.png)
+![](数组方法3.png)
+![](数组方法4.png)
+
+
 ```text
+
+# 切割数组
 l1
 (8) [11, 22, 33, 55, 66, 43, 88, 23]
 l1.slice(0,2)
 (2) [11, 22]
 
+# 反转数组
+l1
+(8) [11, 22, 33, 55, 66, 43, 88, 23]
+l1.reverse()
+(8) [23, 88, 43, 66, 55, 33, 22, 11]
+
+# 分割数组
+l1
+(8) [23, 88, 43, 66, 55, 33, 22, 11]
+l1.join('|')
+'23|88|43|66|55|33|22|11'
+
+# 扩展数组
+l1
+(8) [23, 88, 43, 66, 55, 33, 22, 11]
+
+l1.concat([1,2,3,4])
+(12) [23, 88, 43, 66, 55, 33, 22, 11, 1, 2, 3, 4]
+
+# 数组排序
+l1.sort()
+(8) [11, 22, 23, 33, 43, 55, 66, 88]
+
+# 通过函数操作数组的每个元素
+l1
+(8) [11, 22, 23, 33, 43, 55, 66, 88]
+
+VM506:1 Uncaught SyntaxError: Unexpected token ')'Understand this errorAI
+l1.forEach(function (args1) {
+    console.log(args1)
+})
+VM596:2 11
+VM596:2 22
+VM596:2 23
+VM596:2 33
+VM596:2 43
+VM596:2 55
+VM596:2 66
+VM596:2 88
+undefined
+
+# 删除元素
+l1
+(8) [11, 22, 23, 33, 43, 55, 66, 88]
+l1.splice(0,2)
+(2) [11, 22]
+l1
+(6) [23, 33, 43, 55, 66, 88]
+```
+
+##  自定义对象
+
+![](自定义对象.png)
+
+新建对象的第二种方法
+![](新建对象2.png)
+
+```text
+var d = {'name': 'sheldon','password': '12346'}
+undefined
+
+typeof(d)
+'object'
+
+d.name
+'sheldon'
+
+d.password
+'12346'
+```
+
+![](对象取值.png)
+
+```js
+d
+{name: 'sheldon', age: 23}
+
+for (let index in d) {console.log(index, d[index])}
+VM1980:1 name sheldon
+VM1980:1 age 23
 
 ```
+
+## 比较运算符
+
+```text
+	== 弱等于 相同数值的字符型和数值型可以返回true
+	===  强等于
+
+两种方式的不同支出在于，强等于不支持不同类型的变量比较。
+'123' === 123
+false
+'123' == 123
+true
+```
+
+## 流程控制
+
+![](if.png)
+
+![](elif.png)
+
+![](switch.png)
+
+```text
+var age = 18;
+undefined
+if (age < 18) {
+    console.log('你还没有成年！')
+}
+
+undefined
+if (age < 18) {
+    console.log('你还没有成年！')
+} else {console.log('你已经成年了！')}
+VM1166:3 你已经成年了！
+
+
+var age = 26
+if (age < 18) {
+    console.log('你还没有成年！')
+} else if (age == 26) {
+    console.log('年龄刚好')
+} else {
+    console.log('老baby!')
+}
+
+# switch case语句
+var n = 3;
+undefined
+switch (n) {
+    case 0:
+    console.log('吃饭')
+    break;
+    case 1:
+    console.log('看电影')
+    break;
+        case 2:
+    console.log('碎觉')
+    break;
+        case 3:
+    console.log('yuep')
+    break;
+}
+VM2156:12 yuep
+
+```
+
+## 三元表达式
+
+![](三元表达式.png)
+
+```js
+var c = 10 > 5?111:222 /*成立就是:前面的内容*/
+undefined
+c
+111
+
+var c = 100 > 200?111:222 /*成立就是:后面的内容*/
+undefined
+c
+222
+```
+
+## 循环
+
+![](for.png)
+![](while.png)
+
+```text
+l1
+(6) [23, 33, 43, 55, 66, 88]
+l1.length
+6
+for (let index = 0; index < l1.length; index++) {
+    console.log(l1[index])
+}
+VM2386:2 23
+VM2386:2 33
+VM2386:2 43
+VM2386:2 55
+VM2386:2 66
+VM2386:2 88
+
+var i = 0
+undefined
+while (i < 10) {
+    console.log(i);
+    i++;
+}
+VM2588:2 0
+VM2588:2 1
+VM2588:2 2
+VM2588:2 3
+VM2588:2 4
+VM2588:2 5
+VM2588:2 6
+VM2588:2 7
+VM2588:2 8
+VM2588:2 9
+9
+```
+
+## 函数
+
+1. 普通函数，不带关键字。
+2. 带参数函数。
+3. 函数没有返回值，默认返回undefined，有多个返回值的时候默认返回最后一个值，可以返回数组[]。
+4. 立即执行函数。
+
+![](函数.png)
+![](返回值.png)
+
+
+```text
+# 没有参数
+function func() {
+    console.log('没有参数')
+}
+undefined
+func()
+VM2757:2 没有参数
+
+# 包含参数
+function func1(a,b) {
+        console.log(a,b);
+}
+undefined
+func1(1,2)
+VM2846:2 1 2
+
+# 返回值，当有多个返回值的时候需要是一个数组，不然就只会返回最后的那一个
+function func1(a,b) {
+        console.log(a,b);
+    let c;
+    c = a + b;
+    return c;
+}
+undefined
+
+func1(1,2)
+VM2958:2 1 2
+3
+
+# 返回值
+function func2() {
+    return 1,2,3,4
+}
+
+func2()
+4
+
+# 多个个返回值
+function func2() {
+    return [1,2,3,4];
+}
+undefined
+func2()
+(4) [1, 2, 3, 4]
+```
+
+## 内置对象
+
+object ->  字典
+
+```text
+var d = {'name': 'sheldon', 'age': 23}
+undefined
+typeof(d)
+'object'
+
+d.name
+'sheldon'
+d['name']
+'sheldon'
+```
+
+date对象
+
+![](date%20对象.png)
+
+```text
+var ddd = new Date()
+
+ddd.getFullYear()
+2025
+ddd.getMonth()
+2
+
+ddd.getDate()
+16
+
+ddd.getHours()
+12
+
+ddd.getMinutes()
+25
+
+ddd.getDay()  # 周日
+0
+```
+
+json对象
+
+![](json对象.png)
+
+```text
+var str1 = '{"name": "sheldon", "age": 23}';
+var json1 = '{"name": "sheldon", "age": 23}';
+
+var str1 = '{"name": "sheldon", "age": 23}';
+var json1 = '{"name": "sheldon", "age": 23}';
+undefined
+
+var obj = JSON.parse(str1)
+undefined
+obj
+{name: 'sheldon', age: 23}
+var str = JSON.stringify(json)
+undefined
+str
+'"{\\"name\\": \\"sheldon\\", \\"age\\": 23}"'
+
+```
+
+正则对象 正则表达式中不要出现空格，lastindex属性
+
+![](正则表达式.png)
+![](正则2.png)
+
+math对象
+
+数学运算，不中重点掌握。
+
