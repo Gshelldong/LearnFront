@@ -1,4 +1,4 @@
-1.BOM操作  DOM操作(******)
+## 1.BOM操作  DOM操作(******)
 	
     BOM 操作
     window.innerHeight 获取浏览器内部高度
@@ -33,9 +33,10 @@
     setInterval()            指定时间执行一次，循环定时器
     clearInteral()           清除定时器
     
-DOM操作
+## DOM操作
 
-    1.查找标签
+## 1.查找标签
+   
     当你在查找标签的时候 如果需要给查找出来的标签起一个名字
     那么推荐写法
     var pEle = document.getElementsByClassName('c1')[0]
@@ -47,7 +48,8 @@ DOM操作
 ![](js获取标签2.png)
 
 
-    间接查找
+##　间接查找
+
     parentElement 当前便签的父标签
     children 子标签
     firstElementChild 第一个子标签
@@ -60,7 +62,8 @@ DOM操作
 ![](child标签.png)
 ![](js获取标签3.png)
 
-    2.操作标签
+## 2.操作标签
+
     节点操作
     1.js动态创建标签并添加到正常文档流中
     
@@ -85,7 +88,7 @@ DOM操作
 ![](获取选择框的值.png)
 
 
-类属性操作
+## 类属性操作
 
     .classList   获取标签所有的类名
     .remove    移除标签的类名
@@ -100,7 +103,8 @@ DOM操作
 
 ![](开关灯.png)
 
-    js操作样式
+## js操作样式
+
     标签.style.front  替换front样式字段，设置相应的值
 			
 			事件
