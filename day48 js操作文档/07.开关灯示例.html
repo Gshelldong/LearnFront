@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关灯</title>
+  <style>
+    #d1 {
+        border: 2px solid black;
+        border-radius: 5%;
+        display: inline-block;
+        background: gray;
+    }
+
+    div {
+      border: 2px;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      margin: 20px 10px;
+    }
+
+    .bg-red {
+      background: red;
+    }
+
+    .bg-green {
+      background: green;
+    }
+
+  </style>
+</head>
+<body>
+
+<span id = 'd1'>
+    <div class="bg-red bg-green"></div>
+    <div class="bg-red bg-green"></div>
+    <div class="bg-red bg-green"></div>
+</span>
+
+
+<script>
+    var dEle = document.getElementsByTagName('div');
+
+    function func() {
+        for (let index = 0; index < dEle.length; index++) {
+            dEle[index].classList.toggle('bg-green');
+        }
+    }
+
+    setInterval(func, 1500);
+</script>
+</body>
+</html>

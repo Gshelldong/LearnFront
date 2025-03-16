@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>计时器相关</title>
+</head>
+<body>
+<script>
+  function foo() {
+    alert('123');
+  }
+
+  // 弹窗弹出3次之后就不会再弹了
+  function show() {
+    var t = setInterval(foo, 3000);
+    function inner() {
+      clearInterval(t)
+    }
+    setTimeout(inner, 9000)
+  }
+  show()
+</script>
+</body>
+</html>

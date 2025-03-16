@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>window对象</title>
+</head>
+<body>
+<h1>3秒之后关闭网页</h1>
+
+<script>
+    function func() {
+        window.close()
+    }
+
+    var t = setTimeout(func,3000)
+    // clearTimeout(t)
+</script>
+</body>
+</html>
