@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>js操作样式</title>
+    <style>
+        p {
+            /*font-size: 20px;*/
+        }
+    </style>
+</head>
+<body>
+<p>造化弄人!!!</p>
+<!--默认没有样式在css中操作样式-->
+<script>
+    var pEle = document.getElementsByTagName('p')[0];
+    pEle.style.fontSize = '20px';
+    pEle.style.color = 'red';
+    pEle.style.height = '400px';
+    pEle.style.width = '400px';
+    pEle.style.background = 'gray';
+</script>
+</body>
+</html>

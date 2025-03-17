@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>开关灯</title>
+  <style>
+    #d1 {
+        border: 2px solid black;
+        border-radius: 10px;
+        display: inline-block;
+        background: black;
+    }
+
+    div {
+      border: 2px;
+      border-radius: 50%;
+      height: 200px;
+      width: 200px;
+      margin: 20px 10px;
+    }
+
+    .bg-red {
+      background: red;
+    }
+
+    .bg-green {
+      background: green;
+    }
+
+  </style>
+</head>
+<body>
+
+<span id = 'd1'>
+    <div class="bg-red bg-green"></div>
+    <div class="bg-red bg-green"></div>
+    <div class="bg-red bg-green"></div>
+</span>
+<button class="c1">变色</button>
+
+
+<script>
+    // 获取到div的数组
+    var dEle = document.getElementsByTagName('div');
+
+    var buttonEle = document.getElementsByClassName('c1')[0];
+    // 绑定事件
+    buttonEle.onclick = function () {
+      // for 处理每一个div的样式
+      for (let index = 0; index < dEle.length; index++) {
+            dEle[index].classList.toggle('bg-green');
+        }
+    }
+</script>
+</body>
+</html>

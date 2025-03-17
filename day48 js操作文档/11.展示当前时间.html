@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>展示当前时间</title>
+</head>
+<body>
+<input type="text" class="c1">
+<button id="d1">开始</button>
+<button id="d2">结束</button>
+
+<script>
+    var t = null;
+    var inputEle = document.getElementsByTagName('input')[0];
+
+    // 设置一个函数把input框的值设置为当前时间
+    function showTime() {
+        var currentTime = new Date();
+        inputEle.value = currentTime.toLocaleString();
+    }
+
+    var d1Ele = document.getElementById('d1');
+    var d2Ele = document.getElementById('d2');
+
+    d1Ele.onclick = function () {
+        if (!t) {
+            // 设置定时事件，每隔1s执行一次函数
+            t = setInterval(showTime,1000);
+        }
+    }
+
+    // 结束按钮，触发停止t的事件，t用来记录执行器的状态
+    d2Ele.onclick = function () {
+        clearInterval(t);
+        t = null;
+    }
+</script>
+</body>
+</html>

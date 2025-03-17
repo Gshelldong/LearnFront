@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>获取焦点事件</title>
+</head>
+<body>
+<!--输入框默认mac电脑-->
+<label for="d1">搜索商品: <input type="text" value="mac电脑" id="d1"></label>
+
+<script>
+  var inputEle = document.getElementsByTagName('input')[0];
+  // 点击到里面输入框置为空
+  inputEle.onfocus = function () {
+    inputEle.value = '';
+  }
+
+  // 光标去掉之后，显示的文本
+  inputEle.onblur = function () {
+    inputEle.value = '老板下次再来!!!'
+  }
+</script>
+</body>
+</html>
