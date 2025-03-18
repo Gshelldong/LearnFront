@@ -17,9 +17,53 @@
                 "北京": ["朝阳区", "海淀区"],
                 "山东": ["威海市", "烟台市"],
                 "上海": ["静安区","黄浦区"],
-                "深圳": ["南山区","龙岗区"]
+                "深圳": ["南山区","龙岗区"],
+                "重庆": ["渝中区","大足区","江北区","渝北区","北碚区","大足区","长寿区","南岸区"]
     };
 
+    var se1Ele = document.getElementById('d1');
+    var se2Ele = document.getElementById('d2');
+
+    for (let index in data) {
+        // 创建option标签
+        var optEle = document.createElement('option');
+
+        // 给标签添加内部文本
+        optEle.innerText = index;
+
+        // 给标签设置value属性值
+        optEle.value = index;
+
+        // 把创建好的标签加入select中
+        se1Ele.append(optEle)
+    }
+
+    // 给第一个select1绑定一个change事件
+    se1Ele.onchange = function () {
+        var currentPro = se1Ele.value;
+        var currentCityList = data[currentPro];
+
+        // 先清空第二个select中的option标签
+        se2Ele.innerHTML = '';
+        var opt2Ele = document.createElement('option');
+        // 把上一次省的记录清空，并把默认的值恢复回来
+        opt2Ele.innerText = '-请选择-';
+        se2Ele.append(opt2Ele);
+
+
+        // 循环处理数组中的每一个区的名字
+        currentCityList.forEach(
+            function(city){
+            let opt2Ele = document.createElement('option');
+
+            opt2Ele.innerText = city;
+            opt2Ele.value = city;
+
+            se2Ele.append(opt2Ele);
+        }
+        );
+
+    }
 
 </script>
 </body>
