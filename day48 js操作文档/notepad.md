@@ -135,13 +135,13 @@
 	项目需求
 		在页面上input框中动态展示当前时间
 		
-JQuery
+## JQuery
 	
 	jQuery就类似于python的模块,帮你封装了一对复杂的操作暴露给你一些简易的接口
 	前端的模块 叫 "类库"
 
 	
-jQuery的基本语法结构
+## jQuery的基本语法结构
 
     $(选择器).action(属性)
 	
@@ -150,29 +150,77 @@ jQuery的基本语法结构
 	
 	$('p').css('color','blue')
 	
-	
-	基本选择器
+![](jq操作标签.png)
+
+## 基本选择器
+
 		标签
 		类
 		id
-	
+
+![](jq基本选择器.png)
+![](jq选择器.png)
+
+    jQuery封装了对原生js的操作类似于你的orm
 	jQuery对象
 	原生js对象
 
-	
-	2.jQuery  封装了对原生js的操作类似于你的orm
-	
-	筛选器
+![](js和jq互转.png)
+
+
+## 筛选器
 	
 	:first 获取第一个标签
-	:laset 第二个标签
+	:last 最后一个标签
 	:eq(2) 值是2的标签
 	:even  偶数索引
 	:odd 奇数
 	:not 不是指定标签的
 	:has 内部有指定元素的标签
-	
-	模态框示列 百度登录类似
-	
-	
-	属性选择器
+
+```html
+<ul>
+    <li>001</li>
+    <li>002</li>
+    <li>003</li>
+    <li>004</li>
+    <li>005</li>
+    <li>006</li>
+    <li>007</li>
+    <li>008</li>
+</ul>
+
+
+<div>
+    <span class="c1"></span>
+    <span></span>
+    <span></span>
+</div>
+<div>
+    <p></p>
+    <p></p>
+    <p></p>
+</div>
+```
+
+选择列表中第一个li标签
+
+![](first.png)
+---
+选择值是2的标签
+![](eq.png)
+---
+最后一个标签
+![](last.png)
+---
+包含某个标签的标签
+![](has.png)
+
+## 模态框示列
+
+[示例](17.模态框示例.html)
+
+## 属性选择器
+
+![](属性选择器.png)
+![](类选择器.png)

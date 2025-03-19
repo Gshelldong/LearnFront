@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>模态框示例</title>
+  <script src="jQuery-3.4.1.js"></script>
+  <style>
+    .cover {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(128,128,128,0.45);
+      z-index: 9;
+    }
+
+    .modal {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      height: 200px;
+      width: 400px;
+      background-color: white;
+      z-index: 10;
+      margin-top: -100px;
+      margin-left: -200px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="c1">
+    我是被压在最下的
+</div>
+<button class="c2">叫人</button>
+<div class="cover hidden"></div>
+<div class="modal hidden">
+    <p>username:<input type="text"></p>
+    <p>password:<input type="text"></p>
+
+    <button class="cancel">取消</button>
+</div>
+<script>
+  var b1Ele = $('.c2')[0];
+
+  // 给按钮绑定一个事件，点击的时候把隐藏属性加上
+  b1Ele.onclick = function () {
+    $('.cover').removeClass('hidden');
+    $('.modal').removeClass('hidden');
+  }
+
+  var b2Ele = $('.cancel')[0];
+
+  // 给按钮绑定一个事件，点击取消的时候把隐藏属性去掉
+  b2Ele.onclick = function () {
+    $('.cover').addClass('hidden');
+    $('.modal').addClass('hidden');
+  }
+
+</script>
+</body>
+</html>
