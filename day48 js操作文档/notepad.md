@@ -135,14 +135,15 @@
 	项目需求
 		在页面上input框中动态展示当前时间
 		
-	
+JQuery
 	
 	jQuery就类似于python的模块,帮你封装了一对复杂的操作暴露给你一些简易的接口
 	前端的模块 叫 "类库"
 
 	
-	jQuery的基本语法结构
-		$(选择器).action(属性)
+jQuery的基本语法结构
+
+    $(选择器).action(属性)
 	
 	jQuery给你简化成了$
 	jQuery()  ===  $()
@@ -159,7 +160,7 @@
 	原生js对象
 
 	
-	2.jQuery  封装了对原生js的操作  类似于你的orm
+	2.jQuery  封装了对原生js的操作类似于你的orm
 	
 	筛选器
 	
