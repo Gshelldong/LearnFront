@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>左侧菜单栏示例</title>
+    <script src="jQuery-3.4.1.js"></script>
+  <style>
+    #float-left {
+      position: fixed;
+      bottom: 0px;
+      top: 0px;
+      left: 0px;
+      width: 20%;
+      background-color: black;
+    }
+
+    .menu {
+        color: white;
+    }
+
+    .title {
+        font-size: 24px;
+        text-align: center;
+        border-bottom: 2px solid white;
+    }
+
+    .item {
+        font-size: 20px;
+        padding: 0px 20px;
+        background-color: gray;
+        border-bottom: 2px solid white;
+    }
+
+    .title {
+        background-color: blue;
+    }
+
+    .hidden {
+        display: none;
+    }
+
+  </style>
+</head>
+<body>
+<div id="float-left">
+  <div class="menu">
+    <div class="title">菜单1</div>
+    <div class="items">
+        <div class="item">123</div>
+        <div class="item">123</div>
+        <div class="item">1123</div>
+    </div>
+
+    <div class="title">菜单2</div>
+    <div class="items">
+        <div class="item">123</div>
+        <div class="item">123</div>
+        <div class="item">1123</div>
+    </div>
+
+    <div class="title">菜单3</div>
+    <div class="items">
+        <div class="item">123</div>
+        <div class="item">123</div>
+        <div class="item">1123</div>
+    </div>
+
+  </div>
+</div>
+<script>
+    // 先把items加上隐藏的属性
+    $('.items').addClass('hidden');
+
+    // 触发一个点击事件
+    $('.title').click(function (){
+        $(".items").addClass("hidden");  //批量操作
+
+        // next() 当前标签的下一个标签
+        $(this).next().removeClass("hidden");
+
+        // jQuery链式操作
+        // $(this).next().removeClass('hide').parent().siblings().find('.items').addClass('hide')
+    });
+</script>
+</body>
+</html>
