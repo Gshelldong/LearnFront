@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>回到顶部</title>
+  <script src="jQuery-3.4.1.js"></script>
+  <style>
+    div {
+      height: 1000px;
+    }
+
+    .c1 {
+      background-color: red;
+    }
+
+    .c2 {
+      background-color: green;
+    }
+
+    .c3 {
+      background-color: yellow;
+    }
+
+    .backtop {
+      background-color: black;
+      color: white;
+      width: 80px;
+      height: 80px;
+      position: fixed;
+      right: 50px;
+      bottom: 100px;
+      text-align: center;
+      line-height: 80px;
+    }
+
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+<div class="c1">1</div>
+<div class="c2">2</div>
+<div class="c3">3</div>
+<p class="backtop hidden">回到顶部</p>
+
+<script>
+  $(window).scroll(function (){
+    if ($(window).scrollTop() > 600) {
+      $('p').removeClass('hidden')
+    };
+
+    if ($(window).scrollTop() <= 600) {
+      $('p').addClass('hidden')
+    }
+  })
+
+  $('p').click(function () {
+    $('html').scrollTop(0)
+  })
+</script>
+</body>
+</html>

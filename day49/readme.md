@@ -74,10 +74,14 @@ $('.c1').parentsUntil('html')
 找子标签
 
 ```text
-# 找子标签
+# 找子标签,只会找到这个标签的下一级
 $('#d1').children()
+
+# 可以找包含在内的所有标签
+$('#d1').find('.c2')
 ```
 ![](8.标签方法找子标签.png)
+![](10找子标签.png)
 
 ## 同级别所有标签
 
@@ -87,3 +91,44 @@ $('#d3').siblings()
 
 ```
 ![](9.同级别所有.png)
+
+```jquery
+// 获取列表元素
+
+$('ul li').first()
+```
+![](11.获取列表元素.png)
+
+
+## 样式操作
+
+```html
+<div>
+  <p>111</p>
+  <p>222</p>
+</div>
+```
+
+```jquery
+# 一行控制两个元素样式
+$('div').children().first().css('color','red').next().css('color','green')
+```
+![img.png](img.png)
+
+获取标签位置
+
+```text
+$('p').position()
+
+$('p').offset()
+
+```
+![](13.获取定位.png)
+
+滚动条到顶部的距离
+
+```jquery
+$(window).scrollTop()
+```
+![](14.滚动条到顶端的距离.png)
+![img_1.png](img_1.png)
