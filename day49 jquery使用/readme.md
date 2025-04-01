@@ -235,3 +235,8 @@ $('div').each(function(index){
 data函数
 
 把标签当作仓库临时放一个键值对数据，不会在文档中显示，但是数据实际是存在的。
+```text
+$('div').data('k','v')
+$('div').data('k')
+$('div').data({'a':1,'b':2})
+```
