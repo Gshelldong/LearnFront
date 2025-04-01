@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>克隆</title>
+  <script src="jQuery-3.4.1.js"></script>
+  <style>
+    button {
+      width: 100px;
+      height: 50px;
+      background-color: orange;
+      margin: 4px;
+    }
+  </style>
+</head>
+<body>
+<button>多重影分身术</button>
+<script>
+  // var butEle = document.getElementsByTagName('button')[0];
+  // butEle.onclick = function () {
+    // $(this).after($(this).clone(true))
+    // clone只克隆标签和文本  不克隆事件  加参数true即可克隆事件
+    // $(this).clone(true).insertAfter(this);
+
+    // })
+    // 使用事件委托的方式
+    $('button').on('click', function () {
+      $(this).clone(true).insertAfter(this);
+  })
+</script>
+</body>
+</html>

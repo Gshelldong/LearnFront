@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src="jQuery-3.4.1.js"></script>
+</head>
+<body>
+<span>宜春院</span>
+
+<script>
+  $('span').hover(
+          // 只写一个函数会执行两次这个函数
+          function () {
+            alert('大爷你来了！')
+          },
+          // 鼠标移开的弹框
+          function () {
+            alert('没钱滚蛋')
+          }
+  )
+</script>
+</body>
+</html>

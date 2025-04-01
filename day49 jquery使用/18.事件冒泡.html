@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>事件冒泡</title>
+  <script src="jQuery-3.4.1.js"></script>
+</head>
+<body>
+<div>div
+    <p>p
+        <span>span</span>
+    </p>
+</div>
+
+
+<script>
+    // 事件冒泡的原理一个标签包含了几个子标签，其中一个被点击了，相当于整个标签被点击，如果每个标签都有事件那么都会被触发
+    // 所以使用下面几种方式来防止没有被点击的标签触发事件
+    $('div').click(function (e) {
+        alert('div')
+    });
+    $('p').click(function (e) {
+        alert('p');
+        // 第一种取消事件冒泡的方式
+        // return false
+        e.stopPropagation()
+    });
+    $('span').click(function (e) {
+        alert('span');
+        // 第二种取消事件冒泡的方式
+        e.stopPropagation()
+    })
+</script>
+
+</body>
+</html>

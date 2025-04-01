@@ -132,3 +132,106 @@ $(window).scrollTop()
 ```
 ![](14.滚动条到顶端的距离.png)
 ![img_1.png](img_1.png)
+
+获取元素的宽高
+
+```text
+$('p').height()
+$('p').width()
+$('p').innerWidth()
+$('p').innerHeight()
+$('p').outerWith()
+
+```
+![](15.获取标签文本的宽高.png)
+
+获取input的值
+```text
+var inputEle = document.getElementsByTagName('input')[0]
+undefined
+inputEle
+<input type=​"text">​
+inputEle.value
+'123465'
+
+$('input').val()
+```
+![](16.获取input的值.png)
+
+获取标签中的内容
+```text
+# 设定值可以修改里面的标签里面的内容
+$('div').text()
+$('div').html("<h1>哈哈哈</h1>")
+```
+![](16.获取标签中的内容.png)
+
+设置属性
+
+![](17.设置是属性.png)
+
+判断选择框是否被选中
+```text
+# 返回布尔值
+$('#d1').prop('checked');
+$('#d2').prop('selected');
+```
+![](18.获取checked.png)
+![](19.获取selected.png)
+
+添加标签
+
+```text
+# 添加元素
+var aEle = document.createElement('a');
+aEle.innerText = '点我吧';
+aEle.href = 'https://www.baidu.com';
+$('.c1').append(aEle);
+
+$(aEle).appendTo($('.c1'))
+
+prepend() - 在被选元素的开头插入内容
+
+remove() - 删除被选元素（及其子元素）
+empty() - 从被选元素中删除子元素
+
+$(A).after(B)            A之后放B
+$(A).insertAfter(B)      把A放到B后面
+
+$(A).before(B)    A之前放入B
+$(A).insertBefore(B)  把A放到B的前面
+
+```
+![](21.添加元素.png)
+![](22.操作元素.png)
+
+## 动画效果
+
+```text
+$('div').hide(5000)   5s后隐藏
+$('div').show(5000)   5s后展示
+$('div').fadeOut(5000)  5s后淡出
+$('div').fadeIn(5000)   5s后淡入
+$('div').fadeTo(5000,0.5)  5s逐渐变为0.5透明度
+$('div').slideUp(3000)  3s时间向上拉
+$('div').slideDown(3000) 3s时间向下放
+
+```
+
+each循环
+```text
+// 打索引和标签对象
+$.each($('div'),function (index,obj) {
+    console.log(index,obj)
+})
+
+$('div').each(function(index){
+    console.log($(this))
+})
+```
+![](24.each循环.png)
+![](25.each-this.png)
+
+data函数
+
+把标签当作仓库临时放一个键值对数据，不会在文档中显示，但是数据实际是存在的。
