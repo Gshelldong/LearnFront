@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>框架的基本使用</title>
+  <script src="../jQuery-3.4.1.js"></script>
+
+<!-- 引入bootstrap框架的内容 -->
+<!-- 在引入了框架之后，我们只需要修改便签的类即可获得框架中的样式，十分的方便 -->
+  <link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+<!-- 图标仓库fontawesome -->
+  <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<div class="container">
+  <div class="row">
+    <div class="modal fade bs-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="gridSystemModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="gridSystemModalLabel">提示</h4>
+          </div>
+          <div class="modal-body">
+            <p>重置top偏移到最新位置kafka会断开对消费者组的客户端的连接你确定要重置偏移吗？</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+            <a type="button" class="btn btn-primary" href="https://www.baidu.com/">确定</a>
+          </div>
+        </div><!-- /.modal-content -->
+      </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+  </div>
+</div>
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bs-example-modal-lg">重置偏移</button>
+</body>
+</html>

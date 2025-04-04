@@ -3,16 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>框架的基本使用</title>
-  <script src="jQuery-3.4.1.js"></script>
+  <script src="../jQuery-3.4.1.js"></script>
 
-<!-- 引入框架的内容 -->
-  <link rel="stylesheet" href="bootstrap-3.4.1-dist/css/bootstrap.min.css">
-  <script src="bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+<!-- 引入bootstrap框架的内容 -->
+<!-- 在引入了框架之后，我们只需要修改便签的类即可获得框架中的样式，十分的方便 -->
+  <link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+  <script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+<!-- 图标仓库fontawesome -->
+  <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
   <style>
     .c1 {
       background-color: green;
       border: 2px solid black;
       height:100px
+    }
+
+    .c2 {
+      border: solid 2px black;
+      border-radius: 5px;
+    }
+
+    .f1 {
+      padding-top: 20px;
+    }
+
+    img {
+      width: 200px;
+      height: 200px;
     }
   </style>
 </head>
@@ -33,9 +51,171 @@
     <div class="col-sm-1 c1"></div>
   </div>
   <div class="row">
-    <div class="col-sm-6 col-lg-offset-3 c1"></div>
+<!--  栅格的6份向右边偏移三分就是居中  -->
+    <div class="col-sm-6 col-md-offset-3 c1"></div>
   </div>
-<!-- 左右布局样式 -->
+
+  <div class="row">
+    <div class="col-sm-6 c1"></div>
+    <div class="col-sm-6 c1">
+      <div class="row c1">
+<!--   在栅格中继续分栅格     -->
+        <div class="col-sm-1 c1"></div>
+        <div class="col-sm-1 c1"></div>
+        <div class="col-sm-1 c1"></div>
+        <div class="col-sm-1 c1"></div>
+      </div>
+    </div>
+  </div>
+<!-- 左右布局样式右边三分左边9份 -->
+  <hr style="border: solid 2px black">
+  <div class="col-sm-3 c1"></div>
+  <div class="col-sm-9 c1"></div>
+  <hr style="border: solid 2px black">
+
+<!-- bootstrap标题 -->
+  <h1>一级标题 <small>副一级标题</small></h1>
+  <h2>h2. Bootstrap heading <small>Secondary text</small></h2>
+  <h3>h3. Bootstrap heading <small>Secondary text</small></h3>
+  <h4>h4. Bootstrap heading <small>Secondary text</small></h4>
+  <h5>h5. Bootstrap heading <small>Secondary text</small></h5>
+  <h6>h6. Bootstrap heading <small>Secondary text</small></h6>
+
+  <hr style="border: solid 2px black">
+<!-- 名人名言 -->
+  <blockquote class="blockquote-reverse">
+  <p>为中华之崛起而读书.</p>
+  <footer>国家总理<cite title="Source Title">周恩来</cite></footer>
+</blockquote>
+
+  <pre>print('hello nimei')</pre>
+
+  <hr style="border: solid 2px black">
+<!-- 表格样式 -->
+  <table class="table table-bordered table-hover table-striped">
+    <thead>
+      <tr class="active">
+        <th>id</th>
+        <th>username</th>
+        <th>hobby</th>
+      </tr>
+    </thead>
+    <tbod>
+      <tr class="success">
+        <td>1</td>
+        <td>tank</td>
+        <td>apple</td>
+      </tr>
+      <tr class="danger">
+        <td>2</td>
+        <td>tom</td>
+        <td>mulik</td>
+      </tr>
+      <tr class="warning">
+        <td>3</td>
+        <td>jerry</td>
+        <td>food</td>
+      </tr>
+      <tr class="info">
+        <td>4</td>
+        <td>spike</td>
+        <td>tollen</td>
+      </tr>
+    </tbod>
+  </table>
+  <form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+  </div>
+  <div class="form-group">
+    <label for="exampleInputFile">File input</label>
+    <input type="file" id="exampleInputFile">
+    <p class="help-block">Example block-level help text here.</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox"> Check me out
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">提交</button>
+</form>
+
+
+  <div class="row">
+    <div class="col-md-6 col-md-offset-3 c2">
+      <form class="form-horizontal f1">
+        <div class="form-group">
+          <label for="inputEmail3" class="col-sm-2 control-label">用户名</label>
+          <div class="col-sm-10">
+            <input type="text" class="form-control" id="inputEmail3" placeholder="Username">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+          <div class="col-sm-10">
+            <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <div class="checkbox">
+              <label>
+                <input type="checkbox"> 记住密码
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="form-group">
+          <div class="col-sm-offset-2 col-sm-10">
+            <button type="submit" class="btn btn-success">登录</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <select name="" id="" class="form-control">
+    <option value="">111</option>
+    <option value="">222</option>
+    <option value="">333</option>
+    <option value="">444</option>
+    <option value="">555</option>
+  </select>
+
+  <!-- Standard button -->
+<button type="button" class="btn btn-default">（默认样式）Default</button>
+
+<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+<button type="button" class="btn btn-primary">（首选项）Primary</button>
+
+<!-- Indicates a successful or positive action -->
+<button type="button" class="btn btn-success">（成功）Success</button>
+
+<!-- Contextual button for informational alert messages -->
+<button type="button" class="btn btn-info">（一般信息）Info</button>
+
+<!-- Indicates caution should be taken with this action -->
+<button type="button" class="btn btn-warning">（警告）Warning</button>
+
+<!-- Indicates a dangerous or potentially negative action -->
+<button type="button" class="btn btn-danger">（危险）Danger</button>
+
+<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
+<button type="button" class="btn btn-link">（链接）Link</button>
+
+  <img src="ddg.png" alt="ddg" class="img-rounded">
+  <img src="ddg.png" alt="大大怪" class="img-circle">
+  <img src="ddg.png" alt="大大怪" class="img-thumbnail">
+
+  <i class="fa fa-search" style="font-size:60px;color:green;"></i>
+  <span class="glyphicon glyphicon-heart"></span>
+
 </div>
+
 </body>
 </html>

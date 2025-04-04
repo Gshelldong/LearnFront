@@ -31,7 +31,18 @@ css/bootstrap.min.css
 
 ## 2.流式布局容器
 布局容器有两种方式，居中和铺满。
+class="container" 占中间
+class="container-fluid" 占全部
 
 ## 3.栅格系统(重要)
 
 框架把一行分成12份，在布局的时候只需要改动class的属性就可以修改样式的显示效果。
+
+```bash
+class的作用
+
+row  栅格系统的一行
+col-sm-1    电脑显示器的样式
+col-sm-n    n 表示栅格的几份
+col-lg-offset-3   栅格偏移几份
+```

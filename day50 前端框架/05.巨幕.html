@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>巨幕</title>
+      <script src="../jQuery-3.4.1.js"></script>
+
+  <!-- 引入bootstrap框架的内容 -->
+  <!-- 在引入了框架之后，我们只需要修改便签的类即可获得框架中的样式，十分的方便 -->
+    <link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+  <!-- 图标仓库fontawesome -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--    <style>-->
+<!--        .c1 {-->
+<!--            height: 100px;-->
+<!--            background-color: red;-->
+<!--        }-->
+<!--    </style>-->
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h3>Example heading <span class="label label-danger">New</span></h3>
+        <div class="alert alert-danger" role="alert">警告</div>
+        <div class="col-md-12 c1">
+            <div class="jumbotron">
+              <h1>Hello, world!</h1>
+              <p>欢迎来到勇者的世界，这个世界充满了危险！！！</p>
+              <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+            </div>
+        </div>
+
+
+        <div class="row">
+          <div class="col-md-6 col-md-3">
+            <a href="#" class="thumbnail">
+              <img src="ddg.png" alt="...">
+            </a>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="ddg.png" alt="...">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+                      <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="ddg.png" alt="...">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+            <div class="col-sm-6 col-md-4">
+            <div class="thumbnail">
+              <img src="ddg.png" alt="...">
+              <div class="caption">
+                <h3>Thumbnail label</h3>
+                <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <nav aria-label="Page navigation" class="col-md-offset-5">
+          <ul class="pagination">
+            <li>
+              <a href="#" aria-label="Previous">
+                <span aria-hidden="true">&laquo;</span>
+              </a>
+            </li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li>
+              <a href="#" aria-label="Next">
+                <span aria-hidden="true">&raquo;</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+
+
+        <div class="progress">
+          <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 0%" id="d2">
+            <span class="sr-only">100% Complete</span>
+          </div>
+        </div>
+        <button class="btn btn-success" id="d1">开始</button>
+    </div>
+</div>
+<script>
+    $('#d1').click(function () {
+        let i = 0;
+        function updateProgress() {
+            if (i > 100) return;  // 进度到 100% 终止
+
+            $('#d2').css('width', i + '%').text(i + '%'); // 更新进度条
+
+            i++;  // 进度增加
+            setTimeout(updateProgress, 50); // 每 50ms 递归调用自己
+        }
+
+        updateProgress(); // 启动进度条
+    });
+</script>
+</body>
+</html>

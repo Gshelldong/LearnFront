@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录界面</title>
+    <script src="../jQuery-3.4.1.js"></script>
+
+  <!-- 引入bootstrap框架的内容 -->
+  <!-- 在引入了框架之后，我们只需要修改便签的类即可获得框架中的样式，十分的方便 -->
+    <link rel="stylesheet" href="../bootstrap-3.4.1-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-3.4.1-dist/js/bootstrap.min.js"></script>
+
+  <!-- 图标仓库fontawesome -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        a {
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="row">
+        <h3 class="text-center"><i class="fa fa-user-circle"></i>登录</h3>
+        <div class="col-md-6 col-md-offset-3">
+            <form class="form-horizontal">
+              <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">用户</label>
+                <div class="col-sm-10">
+                  <input type="email" class="form-control" id="inputEmail3" placeholder="User">
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">密码</label>
+                <div class="col-sm-10">
+                  <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <div class="checkbox">
+                    <label>
+                      <input type="checkbox"> 记住密码
+                    </label>
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                  <button type="submit" class="btn btn-success btn-block">登录</button>
+                </div>
+              </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="col-md-6 col-md-offset-4">
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+            登录选项
+            <span class="caret"></span>
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+            <li><a href="#">匿名用户</a></li>
+            <li><a href="#">普通用户</a></li>
+            <li><a href="#">系统管理员</a></li>
+            <li role="separator" class="divider"></li>
+            <li><a href="#">Separated link</a></li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="col-md-5 col-md-offset-4">
+        <div class="list-group">
+            <button type="button" class="list-group-item"><i class="fa fa-home"></i><a href="https://www.baidu.com">首页</a></button>
+          <button type="button" class="list-group-item"><i class="fa fa-child"></i>关于我们</button>
+          <button type="button" class="list-group-item"><i class="fa fa-bar-chart"></i>网站统计</button>
+          <button type="button" class="list-group-item"><i class="fa fa-volume-control-phone"></i>投诉电话</button>
+        </div>
+    </div>
+
+</div>
+</body>
+</html>
